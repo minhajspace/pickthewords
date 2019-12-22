@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import "./App.css";
+
+class App extends React.Component {
+  state = {
+    orignal: ["winter", "is", "Coming"],
+    userPick: []
+  };
+  render() {
+    return (
+      <>
+        <h1>Pick the Words </h1>
+        <div className="ui  segment">
+          <div className="ui buttons">
+            <div className="ui button">{this.state.orignal}</div>
+          </div>
+        </div>
+
+        <div className="ui segment">
+          <div className="ui buttons">
+            <div className="ui button">{this.state.orignal[0]}</div>
+            <div className="ui button">{this.state.orignal[1]}</div>
+            <div className="ui button">{this.state.orignal[2]}</div>
+          </div>
+        </div>
+      </>
+    );
+  }
 }
 
 export default App;
