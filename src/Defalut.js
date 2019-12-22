@@ -17,4 +17,5 @@ class Default extends React.Component {
     );
   }
 }
+
 export default Default;
